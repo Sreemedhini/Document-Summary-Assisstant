@@ -249,7 +249,7 @@ function App() {
       formData.append("file", file);
 
       const API_BASE_URL =
-        import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+        import.meta.env.VITE_API_URL || "https://document-summary-assisstant-2.onrender.com";
 
       const response = await fetch(
         `${API_BASE_URL}/summarize?summary_length=${summaryLength}`,
@@ -293,7 +293,7 @@ function App() {
 
       if (err instanceof TypeError) {
         setError(
-          "Unable to connect to the backend. Make sure your FastAPI server is running on http://127.0.0.1:8000."
+          "Unable to connect to the backend. Make sure your FastAPI server is running on https://document-summary-assisstant-2.onrender.com."
         );
       } else {
         setError(
